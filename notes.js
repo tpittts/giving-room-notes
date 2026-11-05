@@ -44,7 +44,7 @@ window.TGR_NOTES = [
     deck: "Doors were open and families were shopping when we stepped aside for a quick huddle on what's working and what we'll do differently.",
     attendees: ["Jasie", "Rae", "Miriam"],
     summary:
-      "Our first Community Day is in the books! In the middle of it, Jasie, Rae and Miriam took a few minutes to talk through what we were seeing on the floor, while it was still fresh.\n\nThe short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
+      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them! In the middle of it, Jasie, Rae and Miriam took a few minutes to talk through what we were seeing on the floor, while it was still fresh.\n\nThe short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
     sections: [
       {
         heading: "Diapers, wipes and formula stay at checkout",
@@ -61,10 +61,15 @@ window.TGR_NOTES = [
       {
         heading: "Signs that point the way",
         body: "Lots of people walked past and asked, \"Is this the right place?\" Our parking lot sign wasn't drawing people toward our section, so we need one more at the very front. If it's around ten dollars, we'll buy it.\n\nMiriam has been designing signs and cutting them in vinyl, and she'll make category signs for the clothing tables too. The handwritten signs are staying for now, though. They feel homey, like we're part of the community."
+      },
+      {
+        heading: "Other updates: Road to 100 Nos is off and running",
+        body: "On Tuesday we kicked off Road to 100 Nos, our fundraising campaign asking local businesses to become Holiday Partners through December 31. We've already landed our first yes: a $250 donation, thanks to Myeisha!\n\nTo keep the momentum going, everyone on the team will ask at least two businesses a week to donate."
       }
     ],
     wins: [
-      "Our first Community Day happened!",
+      "21 families and 47 children came to our first Community Day!",
+      "Road to 100 Nos brought in its first $250 donation in week one, thanks to Myeisha.",
       "Team shirts were ready in time. Thank you, Miriam, and the friends who helped make them.",
       "The handwritten signs made the space feel warm and welcoming."
     ],
@@ -75,13 +80,15 @@ window.TGR_NOTES = [
       "New sign-in sheet with emails and social media consent",
       "A separate donation sheet so we can offer receipts",
       "Explain one bag per child after families sign in",
-      "Add a sign at the front of our section"
+      "Add a sign at the front of our section",
+      "Everyone asks at least two businesses a week to donate during Road to 100 Nos"
     ],
     actions: [
       { task: "Make a sign for the front of our section, plus category signs for the clothing tables", owner: "Miriam", due: "Next Community Day" },
       { task: "Set up a new sign-in sheet with emails and social media consent", owner: "Team", due: "Next Community Day" },
       { task: "Start a separate donation sheet with signatures and emails for receipts", owner: "Team", due: "Next Community Day" },
-      { task: "Find one more volunteer for the checkout table", owner: "Team" }
+      { task: "Find one more volunteer for the checkout table", owner: "Team" },
+      { task: "Ask at least two businesses to donate for Road to 100 Nos", owner: "Everyone", due: "Every week through Dec 31" }
     ],
     northStar: "Make Community Day easy to find, fair for every family and calm to shop.",
     next: { date: "Our next Community Day", agenda: "Community Days run every other Thursday, 9 to 1. Try out the new sign-in, half-full tables and front sign." },
@@ -96,7 +103,8 @@ window.TGR_NOTES = [
     faq: [
       { q: "Why keep diapers and formula at checkout?", a: "They're what families need most and what runs out fastest. Handing them out at checkout keeps it fair for everyone." },
       { q: "Why tell families about the bag limit after they sign in?", a: "It keeps the welcome table simple and friendly. Once a family is signed in, we hand them one bag per child and explain how it works." },
-      { q: "Why ask about social media?", a: "We love sharing what Community Day looks like, but only with families who are comfortable with it. The new sign-in sheet asks first." }
+      { q: "Why ask about social media?", a: "We love sharing what Community Day looks like, but only with families who are comfortable with it. The new sign-in sheet asks first." },
+      { q: "What is Road to 100 Nos?", a: "Our fundraising campaign through December 31. Each of us asks local businesses to become Holiday Partners, and our goal is to hear 100 nos. Asking that often means plenty of yeses along the way." }
     ],
     crossword: [
       { answer: "DIAPERS", clue: "Kept at checkout with wipes and formula" },
@@ -107,7 +115,8 @@ window.TGR_NOTES = [
       { answer: "VINYL", clue: "What Miriam cuts her designs from" },
       { answer: "RECEIPT", clue: "The donation sheet lets us send one" },
       { answer: "HOMEY", clue: "How our handwritten signs feel" },
-      { answer: "RESTOCK", clue: "What we'll keep doing as tables run low" }
+      { answer: "RESTOCK", clue: "What we'll keep doing as tables run low" },
+      { answer: "FAMILIES", clue: "Twenty-one of these came to our first Community Day" }
     ]
   },
   {
