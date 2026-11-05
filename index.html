@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meeting notes from The Giving Room, gathered edition by edition.">
+<meta name="theme-color" content="#C2785C">
+<meta name="robots" content="noindex, nofollow">
+<title>The Giving Room Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   THE GIVING ROOM NOTES — Warm Haven newspaper
+   Colors: Terracotta #C2785C · Sage #8B9E7E
+   Linen #F5EDE4 · Espresso #3D2E24 · Honey #D4A96A
+   ═══════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --terracotta: #C2785C;
+  --terracotta-dark: #A5603F;
+  --terracotta-tint: #F6E4DA;
+  --sage: #8B9E7E;
+  --sage-dark: #6B7F5F;
+  --sage-tint: #E6ECDF;
+  --linen: #F5EDE4;
+  --linen-dark: #EDE3D7;
+  --rule: #D9C9B8;
+  --espresso: #3D2E24;
+  --espresso-soft: #6B5A4E;
+  --honey: #D4A96A;
+  --honey-tint: #F7EBD5;
+  --white: #FFFDF9;
+}
+
+body {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  background: var(--linen);
+  color: var(--espresso);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Lora', Georgia, serif; line-height: 1.25; }
+a { color: var(--terracotta-dark); }
+a:hover { color: var(--terracotta); }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+
+.paper {
+  max-width: 1120px;
+  margin: 24px auto 48px;
+  padding: 32px 40px 40px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 2px 24px rgba(61, 46, 36, 0.07);
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--espresso-soft);
+}
+.topbar a { text-decoration: none; font-weight: 600; }
+
+/* ── MASTHEAD ── */
+.masthead {
+  text-align: center;
+  padding: 20px 0 14px;
+  border-bottom: 3px double var(--espresso);
+}
+.masthead-name {
+  font-size: clamp(2.2rem, 6.5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.masthead-name em { font-style: italic; font-weight: 500; color: var(--sage-dark); }
+.masthead-tag {
+  margin-top: 6px;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--espresso-soft);
+}
+
+.dateline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--espresso);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── TOOLS ── */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.tools input, .tools select {
+  font-size: 0.9rem;
+  background: var(--linen);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+.tools input { flex: 1 1 220px; min-width: 0; }
+.tools select { flex: 0 1 auto; }
+
+/* ── LEAD STORY ── */
+.front {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 40px;
+  padding: 28px 0 8px;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta-dark);
+}
+.badge {
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--honey);
+  color: var(--espresso);
+}
+
+.headline {
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
+  font-weight: 700;
+  margin: 8px 0 10px;
+  text-wrap: balance;
+}
+.deck {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--espresso-soft);
+  text-wrap: pretty;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 22px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--linen);
+  color: var(--espresso-soft);
+}
+
+.story {
+  column-count: 2;
+  column-gap: 32px;
+  column-rule: 1px solid var(--rule);
+}
+.story p { margin-bottom: 1em; text-wrap: pretty; }
+.story > p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 3.6em;
+  line-height: 0.85;
+  padding: 6px 8px 0 0;
+  color: var(--sage-dark);
+}
+.story h3 { font-size: 1.15rem; margin: 0.4em 0; break-after: avoid; }
+.story .section-rule { border: 0; border-top: 1px solid var(--rule); margin: 0.4em 0 1em; width: 48px; }
+
+.pullquote {
+  break-inside: avoid;
+  margin: 0.6em 0 1.2em;
+  padding: 14px 0;
+  border-top: 2px solid var(--terracotta);
+  border-bottom: 2px solid var(--terracotta);
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+.pullquote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--espresso-soft);
+}
+
+/* ── STATS ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.stat-box { background: var(--linen); border-radius: 12px; padding: 14px 16px; }
+.stat { font-family: 'Lora', serif; font-size: 1.9rem; font-weight: 700; line-height: 1.1; color: var(--terracotta-dark); }
+.stat-label { font-size: 0.8rem; font-weight: 600; color: var(--espresso-soft); }
+
+/* ── SIDEBAR BOXES ── */
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+.box { background: var(--linen); border-radius: 12px; padding: 18px 20px; }
+.box h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--espresso);
+}
+.box.sage { background: var(--sage-tint); }
+.box.sage h4 { border-color: var(--sage-dark); color: var(--sage-dark); }
+.box.honey { background: var(--honey-tint); }
+.box.honey h4 { border-color: var(--honey); }
+.box.terra { background: var(--terracotta-tint); }
+.box.terra h4 { border-color: var(--terracotta); color: var(--terracotta-dark); }
+.box ul { list-style: none; }
+.box li { font-size: 0.92rem; padding: 7px 0; border-bottom: 1px dashed var(--rule); }
+.box li:last-child { border-bottom: 0; }
+.box p { font-size: 0.95rem; }
+.box .big { font-family: 'Lora', serif; font-size: 1.08rem; font-style: italic; line-height: 1.45; }
+.box .check { color: var(--sage-dark); font-weight: 800; margin-right: 6px; }
+.box .meta { display: block; font-size: 0.8rem; font-weight: 700; color: var(--espresso-soft); }
+.otter-link { font-size: 0.88rem; font-weight: 700; text-decoration: none; }
+
+/* ── INTERACTIVE SECTIONS ── */
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+.band.full { grid-template-columns: 1fr; }
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+}
+.band h2 { font-size: 1.45rem; margin: 2px 0 6px; }
+.small { font-size: 0.88rem; color: var(--espresso-soft); }
+.split { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.progress {
+  height: 10px;
+  margin: 14px 0 4px;
+  border-radius: 999px;
+  background: var(--linen-dark);
+  overflow: hidden;
+}
+.progress > div { height: 100%; width: 0; background: var(--sage); transition: width 0.25s; }
+.pct {
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--sage-tint);
+  color: var(--sage-dark);
+  white-space: nowrap;
+}
+.action {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--linen-dark);
+  cursor: pointer;
+}
+.action input { width: 22px; height: 22px; margin-top: 2px; flex-shrink: 0; accent-color: var(--sage-dark); }
+.action strong { display: block; font-weight: 700; }
+.action.done strong { text-decoration: line-through; color: var(--espresso-soft); }
+.cheer { margin-top: 10px; }
+
+.poll { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; }
+.poll button {
+  text-align: left;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--terracotta);
+  background: var(--white);
+  font-weight: 700;
+  color: var(--terracotta-dark);
+}
+.poll button:hover { background: var(--terracotta-tint); }
+.poll button[aria-pressed="true"] { background: var(--terracotta); border-color: var(--terracotta); color: var(--white); }
+.note-line { padding: 10px 14px; border-radius: 12px; background: var(--linen); font-size: 0.88rem; }
+
+details { border-bottom: 1px solid var(--linen-dark); padding: 12px 0; }
+details summary { cursor: pointer; font-weight: 700; }
+details p { margin-top: 6px; color: var(--espresso-soft); }
+
+.label { display: block; font-size: 0.85rem; font-weight: 800; margin: 12px 0 5px; }
+.field {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--white);
+  font-size: 1rem;
+}
+textarea.field { min-height: 90px; resize: vertical; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--terracotta);
+  color: var(--white);
+  font-weight: 800;
+}
+.btn:hover { background: var(--terracotta-dark); }
+.btn:disabled { opacity: 0.5; cursor: default; background: var(--terracotta); }
+.btn.soft { background: var(--linen); color: var(--espresso); border: 1px solid var(--rule); }
+.btn.soft:hover { background: var(--linen-dark); }
+.ideas { max-height: 220px; overflow: auto; margin-top: 10px; }
+.idea { padding: 10px 0; border-top: 1px solid var(--linen-dark); overflow-wrap: anywhere; font-size: 0.92rem; }
+
+/* ── CROSSWORD ── */
+.xw-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+.xw-board { flex: 0 1 auto; min-width: 0; max-width: 100%; }
+.xw-current {
+  min-height: 48px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--honey-tint);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.xw-current b { color: var(--terracotta-dark); margin-right: 6px; }
+.xw-grid {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+}
+.xw-cell, .xw-gap { aspect-ratio: 1; min-width: 0; }
+.xw-cell { position: relative; }
+.xw-cell input {
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--espresso);
+  border-radius: 6px;
+  background: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: clamp(16px, 2.4vw, 1.3rem);
+  caret-color: transparent;
+  padding: 0;
+}
+.xw-cell input:focus { outline: none; background: var(--honey) !important; }
+.xw-cell.in-word input { background: var(--honey-tint); }
+.xw-cell.wrong input { color: var(--terracotta-dark); background: var(--terracotta-tint); text-decoration: line-through; }
+.xw-cell.solved input { background: var(--sage-tint); border-color: var(--sage-dark); }
+.xw-num {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+  color: var(--espresso-soft);
+}
+.xw-clues { flex: 1 1 320px; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.xw-clues h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--espresso);
+}
+.xw-clues ol { list-style: none; }
+.xw-clues li {
+  font-size: 0.92rem;
+  padding: 6px 8px;
+  margin: 0 -8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.xw-clues li b { display: inline-block; min-width: 1.6em; color: var(--terracotta-dark); }
+.xw-clues li.active { background: var(--honey-tint); }
+.xw-clues li.done { color: var(--espresso-soft); text-decoration: line-through; }
+.xw-msg { margin-top: 12px; font-weight: 700; min-height: 1.5em; }
+.xw-msg.win { color: var(--sage-dark); }
+
+/* ── ARCHIVE ── */
+.archive-head {
+  margin-top: 16px;
+  padding: 8px 0;
+  border-top: 3px double var(--espresso);
+  border-bottom: 1px solid var(--espresso);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.archive-head h2 { font-size: 1.3rem; }
+.archive-head span { font-size: 0.82rem; color: var(--espresso-soft); }
+.archive { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 20px 22px;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  transition: background 0.15s;
+}
+.card:nth-child(3n) { border-right: 0; }
+.card:hover { background: var(--linen); color: inherit; }
+.card[aria-current="true"] { background: var(--linen); }
+.card[aria-current="true"] .card-date::after { content: " · Reading now"; color: var(--terracotta-dark); }
+.card-date { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--espresso-soft); }
+.card h3 { font-size: 1.12rem; margin: 6px 0; }
+.card p { font-size: 0.88rem; color: var(--espresso-soft); }
+
+.empty { padding: 48px 0; text-align: center; font-family: 'Lora', serif; font-style: italic; color: var(--espresso-soft); }
+.footer { margin-top: 28px; text-align: center; font-size: 0.8rem; color: var(--espresso-soft); }
+
+button.print-btn { font-weight: 600; color: var(--terracotta-dark); background: none; border: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .front { grid-template-columns: 1fr; gap: 28px; }
+  .archive { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .card:nth-child(2n) { border-right: 0; }
+}
+@media (max-width: 700px) {
+  .band { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .paper { margin: 0; padding: 20px 16px 28px; border-radius: 0; box-shadow: none; }
+  .story { column-count: 1; }
+  .stats { gap: 8px; }
+  .stat-box { padding: 10px 12px; }
+  .stat { font-size: 1.5rem; }
+  .xw-clues { grid-template-columns: 1fr; }
+  .archive { grid-template-columns: 1fr; }
+  .card { border-right: 0 !important; padding: 16px 0; }
+  .dateline { justify-content: center; text-align: center; }
+  .topbar .print-btn { display: none; }
+}
+
+/* ── PRINT ── */
+@media print {
+  body { background: #fff; }
+  .paper { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+  .tools, .topbar, .archive-head, .archive, .otter-link, .no-print { display: none !important; }
+  .box { background: none; border: 1px solid var(--rule); }
+}
+</style>
+</head>
+<body>
+
+<div class="paper">
+  <div class="topbar">
+    <a href="https://thegivingroom.store/">← Back to The Giving Room</a>
+    <button class="print-btn" type="button" onclick="window.print()">Print this edition</button>
+  </div>
+
+  <header class="masthead">
+    <h1 class="masthead-name">The Giving Room <em>Notes</em></h1>
+    <p class="masthead-tag">Good things happen when we show up: what we celebrated, what we decided, and what's next</p>
+  </header>
+
+  <div class="dateline">
+    <span id="dl-vol">Vol. 1</span>
+    <span id="dl-date"></span>
+    <span>NW Houston</span>
+  </div>
+
+  <div class="tools">
+    <input id="search" type="search" placeholder="Search all notes…" aria-label="Search all notes">
+    <select id="kind" aria-label="Filter by meeting type"><option value="">All meetings</option></select>
+    <select id="month" aria-label="Filter by month"><option value="">All dates</option></select>
+  </div>
+
+  <main id="front"></main>
+
+  <div class="archive-head">
+    <h2>The Archive</h2>
+    <span id="archive-count"></span>
+  </div>
+  <nav class="archive" id="archive" aria-label="All editions"></nav>
+
+  <p class="footer">Made for people, not just meeting minutes · The Giving Room · Come as you are</p>
+</div>
+
+<script src="notes.js"></script>
+<script>
+(function () {
+  var notes = (window.TGR_NOTES || []).slice().sort(function (a, b) {
+    return b.date.localeCompare(a.date);
+  });
+  var STORE = "tgr-notes-v1:";
+  var DEFAULT_PUZZLE = [
+    { answer: "FAMILIES", clue: "Who we support from the start" },
+    { answer: "VOLUNTEER", clue: "Someone who shows up to sort, stock and serve" },
+    { answer: "DIAPERS", clue: "Always on our wish list" },
+    { answer: "HAVEN", clue: "Warm ___ (our brand direction)" },
+    { answer: "CARE", clue: "Tangible resources, community and ___" },
+    { answer: "NEIGHBOR", clue: "We talk like one who's been through it" }
+  ];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  };
+  var paras = function (text) {
+    return String(text || "").split(/\n\s*\n/).filter(Boolean)
+      .map(function (p) { return "<p>" + esc(p.trim()) + "</p>"; }).join("");
+  };
+  var parseDate = function (d) { var p = d.split("-"); return new Date(+p[0], p[1] - 1, +p[2]); };
+  var longDate = function (d) {
+    return parseDate(d).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  };
+  var shortDate = function (d) {
+    return parseDate(d).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  };
+  var monthKey = function (d) { return d.slice(0, 7); };
+  var monthLabel = function (k) {
+    return parseDate(k + "-01").toLocaleDateString("en-US", { year: "numeric", month: "long" });
+  };
+  var plural = function (n, word) { return n + " " + word + (n === 1 ? "" : "s"); };
+
+  // Per-edition progress lives in this browser only
+  function loadState(id) {
+    var st = null;
+    try { st = JSON.parse(localStorage.getItem(STORE + id) || "null"); } catch (e) {}
+    st = st && typeof st === "object" ? st : {};
+    return {
+      tasks: st.tasks && typeof st.tasks === "object" ? st.tasks : {},
+      poll: typeof st.poll === "string" ? st.poll : "",
+      pollSent: typeof st.pollSent === "string" ? st.pollSent : "",
+      ideas: Array.isArray(st.ideas) ? st.ideas.slice(0, 40) : [],
+      xw: st.xw && typeof st.xw === "object" ? st.xw : {}
+    };
+  }
+  function saveState(id, st) {
+    try { localStorage.setItem(STORE + id, JSON.stringify(st)); } catch (e) {}
+  }
+
+  // This standalone copy has no form backend, so responses open as a
+  // pre-filled email in the reader's mail app
+  var RESPONSE_EMAIL = "terazhap@gmail.com";
+  function sendResponse(n, fields) {
+    var lines = ["Edition: " + n.title + " (" + shortDate(n.date) + ")", ""];
+    if (fields["poll-question"]) lines.push("Question: " + fields["poll-question"]);
+    if (fields["poll-choice"]) lines.push("My pick: " + fields["poll-choice"]);
+    if (fields.name) lines.push("From: " + fields.name);
+    if (fields.message) lines.push("", fields.message);
+    var subject = "Giving Room Notes: " + fields.type + " (" + shortDate(n.date) + ")";
+    window.location.href = "mailto:" + RESPONSE_EMAIL + "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(lines.join("\n"));
+    return Promise.resolve();
+  }
+  var SEND_FAIL = "Something went wrong. You can email the team at " + RESPONSE_EMAIL + ".";
+  var NO_MAIL_APP = " No email app? Write to " + RESPONSE_EMAIL + ".";
+
+  // Edition numbers count up from the oldest meeting
+  var editionNo = {};
+  notes.slice().reverse().forEach(function (n, i) { editionNo[n.id] = i + 1; });
+
+  // Fill filters
+  var kinds = [], months = [];
+  notes.forEach(function (n) {
+    if (n.kicker && kinds.indexOf(n.kicker) < 0) kinds.push(n.kicker);
+    var m = monthKey(n.date);
+    if (months.indexOf(m) < 0) months.push(m);
+  });
+  kinds.sort().forEach(function (k) { $("kind").insertAdjacentHTML("beforeend", "<option>" + esc(k) + "</option>"); });
+  months.forEach(function (m) { $("month").insertAdjacentHTML("beforeend", '<option value="' + m + '">' + esc(monthLabel(m)) + "</option>"); });
+
+  var haystack = function (n) {
+    return [n.title, n.kicker, n.deck, n.summary, n.northStar, (n.attendees || []).join(" "),
+      (n.sections || []).map(function (s) { return s.heading + " " + s.body; }).join(" "),
+      (n.wins || []).join(" "), (n.decisions || []).join(" "),
+      (n.actions || []).map(function (a) { return a.task + " " + (a.owner || ""); }).join(" ")
+    ].join(" ").toLowerCase();
+  };
+
+  function filtered() {
+    var q = $("search").value.trim().toLowerCase();
+    var k = $("kind").value, m = $("month").value;
+    return notes.filter(function (n) {
+      return (!k || n.kicker === k) && (!m || monthKey(n.date) === m) && (!q || haystack(n).indexOf(q) >= 0);
+    });
+  }
+
+  /* ───────── CROSSWORD LAYOUT ─────────
+     Greedy placement: longest word first, then each word is crossed
+     onto the grid where it keeps the puzzle most compact. Words that
+     can't cross anything cleanly are left out. */
+  function buildCrossword(entries) {
+    var words = (entries || []).map(function (e) {
+      return { answer: String(e.answer || "").toUpperCase().replace(/[^A-Z]/g, ""), clue: e.clue || "" };
+    }).filter(function (w) { return w.answer.length >= 2; })
+      .sort(function (a, b) { return b.answer.length - a.answer.length; });
+    if (words.length < 2) return null;
+
+    var grid = {}, dirs = {}, placed = [];
+    var key = function (r, c) { return r + "," + c; };
+    var D = { across: [0, 1], down: [1, 0] };
+
+    function score(word, r, c, dir) {
+      var dr = D[dir][0], dc = D[dir][1], hits = 0;
+      if (grid[key(r - dr, c - dc)] || grid[key(r + dr * word.length, c + dc * word.length)]) return -1;
+      for (var i = 0; i < word.length; i++) {
+        var rr = r + dr * i, cc = c + dc * i, k = key(rr, cc), ch = grid[k];
+        if (ch) {
+          if (ch !== word[i] || dirs[k][dir]) return -1;
+          hits++;
+        } else if (grid[key(rr + dc, cc + dr)] || grid[key(rr - dc, cc - dr)]) {
+          return -1;
+        }
+      }
+      return hits;
+    }
+    function place(w, r, c, dir) {
+      var dr = D[dir][0], dc = D[dir][1];
+      for (var i = 0; i < w.answer.length; i++) {
+        var k = key(r + dr * i, c + dc * i);
+        grid[k] = w.answer[i];
+        dirs[k] = dirs[k] || {};
+        dirs[k][dir] = true;
+      }
+      placed.push({ answer: w.answer, clue: w.clue, r: r, c: c, dir: dir });
+    }
+    function bounds(extra) {
+      var b = { r0: Infinity, r1: -Infinity, c0: Infinity, c1: -Infinity };
+      placed.concat(extra ? [extra] : []).forEach(function (p) {
+        var len = p.answer.length - 1;
+        b.r0 = Math.min(b.r0, p.r); b.c0 = Math.min(b.c0, p.c);
+        b.r1 = Math.max(b.r1, p.r + (p.dir === "down" ? len : 0));
+        b.c1 = Math.max(b.c1, p.c + (p.dir === "across" ? len : 0));
+      });
+      return b;
+    }
+
+    place(words[0], 0, 0, "across");
+    var pending = words.slice(1);
+    // Two passes so words skipped early get another chance once the grid grows
+    for (var pass = 0; pass < 2; pass++) {
+      pending = pending.filter(function (w) {
+        var best = null;
+        Object.keys(grid).forEach(function (k) {
+          var rc = k.split(",").map(Number);
+          for (var i = 0; i < w.answer.length; i++) {
+            if (w.answer[i] !== grid[k]) continue;
+            ["across", "down"].forEach(function (dir) {
+              var r = rc[0] - D[dir][0] * i, c = rc[1] - D[dir][1] * i;
+              var hits = score(w.answer, r, c, dir);
+              if (hits < 1) return;
+              var b = bounds({ answer: w.answer, r: r, c: c, dir: dir });
+              var h = b.r1 - b.r0 + 1, wd = b.c1 - b.c0 + 1;
+              // Prefer compact, roughly square grids with more crossings
+              var cost = Math.max(h, wd) * 10 + h * wd / 10 - hits * 6;
+              if (!best || cost < best.cost) best = { r: r, c: c, dir: dir, cost: cost };
+            });
+          }
+        });
+        if (best) { place(w, best.r, best.c, best.dir); return false; }
+        return true;
+      });
+    }
+
+    var b = bounds();
+    var rows = b.r1 - b.r0 + 1, cols = b.c1 - b.c0 + 1;
+    var cells = {};
+    placed.forEach(function (p) { p.r -= b.r0; p.c -= b.c0; });
+    placed.sort(function (a, z) { return a.r - z.r || a.c - z.c; });
+    var num = 0, starts = {};
+    placed.forEach(function (p, idx) {
+      var sk = key(p.r, p.c);
+      if (!starts[sk]) starts[sk] = ++num;
+      p.num = starts[sk];
+      p.idx = idx;
+      for (var i = 0; i < p.answer.length; i++) {
+        var r = p.r + (p.dir === "down" ? i : 0), c = p.c + (p.dir === "across" ? i : 0), k = key(r, c);
+        cells[k] = cells[k] || { letter: p.answer[i], words: {} };
+        cells[k].words[p.dir] = idx;
+      }
+      cells[sk].num = p.num;
+    });
+    return { rows: rows, cols: cols, cells: cells, words: placed };
+  }
+
+  /* ───────── RENDER ───────── */
+  function renderFront(n) {
+    if (!n) {
+      $("front").innerHTML = '<p class="empty">No editions match that search yet.</p>';
+      $("dl-date").textContent = "";
+      return;
+    }
+    var st = loadState(n.id);
+    $("dl-vol").textContent = "Vol. " + n.date.slice(0, 4) + " · No. " + editionNo[n.id];
+    $("dl-date").textContent = longDate(n.date);
+
+    // Story
+    var story = paras(n.summary);
+    (n.sections || []).forEach(function (s, i) {
+      if (i === 1 && n.quote && n.quote.text) story += quoteHtml(n.quote);
+      story += '<hr class="section-rule"><h3>' + esc(s.heading) + "</h3>" + paras(s.body);
+    });
+    if (n.quote && n.quote.text && (n.sections || []).length < 2) story += quoteHtml(n.quote);
+
+    var wordCount = haystack(n).split(/\s+/).length;
+    var tags = '<span class="tag">' + esc(shortDate(n.date)) + "</span>" +
+      '<span class="tag">' + Math.max(1, Math.round(wordCount / 200)) + "-minute read</span>" +
+      (n.attendees && n.attendees.length ? '<span class="tag">With ' + esc(n.attendees.join(", ")) + "</span>" : "");
+
+    var actions = n.actions || [];
+    var stats =
+      '<div class="stats">' +
+        '<div class="stat-box"><div class="stat">' + (n.wins || []).length + '</div><div class="stat-label">Wins</div></div>' +
+        '<div class="stat-box"><div class="stat">' + (n.decisions || []).length + '</div><div class="stat-label">Decisions</div></div>' +
+        '<div class="stat-box"><div class="stat" id="stat-done">0/' + actions.length + '</div><div class="stat-label">Action items done</div></div>' +
+      "</div>";
+
+    // Sidebar
+    var side = "";
+    if (n.wins && n.wins.length) {
+      side += '<div class="box honey"><h4>Worth Celebrating</h4><ul>' + n.wins.map(function (w) {
+        return "<li>" + esc(w) + "</li>";
+      }).join("") + "</ul></div>";
+    }
+    if (n.decisions && n.decisions.length) {
+      side += '<div class="box sage"><h4>What We Decided</h4><ul>' + n.decisions.map(function (d) {
+        return '<li><span class="check" aria-hidden="true">✓</span>' + esc(d) + "</li>";
+      }).join("") + "</ul></div>";
+    }
+    if (n.northStar) {
+      side += '<div class="box terra"><h4>Our North Star</h4><p class="big">' + esc(n.northStar) + "</p></div>";
+    }
+    if (n.next && (n.next.date || n.next.agenda)) {
+      side += '<div class="box"><h4>Next Gathering</h4>' +
+        (n.next.date ? '<p><strong>' + esc(n.next.date) + "</strong></p>" : "") +
+        (n.next.agenda ? '<p class="small">' + esc(n.next.agenda) + "</p>" : "") + "</div>";
+    }
+    if (n.otterUrl) {
+      side += '<a class="otter-link" href="' + esc(n.otterUrl) + '" target="_blank" rel="noopener noreferrer">Listen to the full recording →</a>';
+    }
+
+    var html =
+      '<article class="front">' +
+        "<div>" +
+          '<span class="kicker">' + esc(n.kicker || "Meeting Notes") + (n.sample ? '<span class="badge">Sample</span>' : "") + "</span>" +
+          '<h2 class="headline">' + esc(n.title) + "</h2>" +
+          (n.deck ? '<p class="deck">' + esc(n.deck) + "</p>" : "") +
+          '<div class="tags">' + tags + "</div>" +
+          stats +
+          '<div class="story">' + story + "</div>" +
+        "</div>" +
+        '<aside class="sidebar">' + side + "</aside>" +
+      "</article>";
+
+    // Action board + pulse check
+    var board = "";
+    if (actions.length) {
+      board =
+        "<section>" +
+          '<div class="eyebrow">Tiny steps add up</div>' +
+          '<div class="split"><h2>Action Board</h2><span class="pct" id="pct">0% done</span></div>' +
+          '<p class="small">Tick off items as they get done. Your checkmarks are saved on this device.</p>' +
+          '<div class="progress" role="progressbar" aria-label="Action items done" aria-valuemin="0" aria-valuemax="' + actions.length + '"><div id="bar"></div></div>' +
+          actions.map(function (a, i) {
+            var meta = [a.owner, a.due ? "by " + a.due : ""].filter(Boolean).join(" · ");
+            return '<label class="action"><input type="checkbox" data-task="t' + i + '"><span><strong>' + esc(a.task) + "</strong>" +
+              (meta ? '<span class="small">' + esc(meta) + "</span>" : "") + "</span></label>";
+          }).join("") +
+          '<p class="small cheer" id="cheer" aria-live="polite"></p>' +
+        "</section>";
+    }
+    var poll = "";
+    if (n.poll && n.poll.options && n.poll.options.length) {
+      poll =
+        '<section class="no-print">' +
+          '<div class="eyebrow">Your voice matters</div>' +
+          "<h2>Pulse Check</h2>" +
+          '<p class="small">' + esc(n.poll.question || "What should we focus on next?") + "</p>" +
+          '<div class="poll">' + n.poll.options.map(function (o) {
+            return '<button type="button" data-choice="' + esc(o) + '" aria-pressed="false">' + esc(o) + "</button>";
+          }).join("") + "</div>" +
+          '<p class="note-line" id="poll-msg" aria-live="polite"></p>' +
+          '<div class="controls"><button class="btn" type="button" id="poll-send" disabled>Email my pick</button></div>' +
+        "</section>";
+    }
+    if (board || poll) html += '<div class="band' + (board && poll ? "" : " full") + '">' + board + poll + "</div>";
+
+    // Puzzle corner
+    var xw = buildCrossword(n.crossword && n.crossword.length ? n.crossword : DEFAULT_PUZZLE);
+    if (xw) html += crosswordHtml(xw);
+
+    // Details + ideas
+    var faq = "";
+    if (n.faq && n.faq.length) {
+      faq = "<section>" +
+        '<div class="eyebrow">More context, only if you want it</div>' +
+        "<h2>Curious? Open the Details</h2>" +
+        n.faq.map(function (f) { return "<details><summary>" + esc(f.q) + "</summary><p>" + esc(f.a) + "</p></details>"; }).join("") +
+      "</section>";
+    }
+    var spark =
+      '<section class="no-print">' +
+        '<div class="eyebrow">Add your spark</div>' +
+        "<h2>Ideas, Offers &amp; Questions</h2>" +
+        '<p class="small">Want to help or have a question? Tap the button and your email app opens with your note ready to send. We read every one.</p>' +
+        '<label class="label" for="idea-name">Your name (optional)</label>' +
+        '<input class="field" id="idea-name" type="text" maxlength="80" placeholder="How should we call you?">' +
+        '<label class="label" for="idea-text">Your note</label>' +
+        '<textarea class="field" id="idea-text" maxlength="800" placeholder="I can help with… / What if we… / I have a question about…"></textarea>' +
+        '<div class="controls"><button class="btn" type="button" id="idea-add">Email my note</button></div>' +
+        '<p class="small" id="idea-msg" aria-live="polite" style="margin-top:8px"></p>' +
+        '<div class="ideas" id="ideas"></div>' +
+      "</section>";
+    html += '<div class="band' + (faq ? "" : " full") + '">' + faq + spark + "</div>";
+
+    $("front").innerHTML = html;
+    document.title = n.title + " · The Giving Room Notes";
+
+    bindBoard(n, st);
+    bindPoll(n, st);
+    bindIdeas(n, st);
+    if (xw) bindCrossword(n, st, xw);
+  }
+
+  function quoteHtml(q) {
+    return '<blockquote class="pullquote">“' + esc(q.text) + "”" + (q.by ? "<cite>" + esc(q.by) + "</cite>" : "") + "</blockquote>";
+  }
+
+  /* ───────── ACTION BOARD ───────── */
+  function bindBoard(n, st) {
+    var boxes = [].slice.call(document.querySelectorAll("[data-task]"));
+    if (!boxes.length) return;
+    function paint() {
+      var done = 0;
+      boxes.forEach(function (b) {
+        b.checked = !!st.tasks[b.dataset.task];
+        b.closest(".action").classList.toggle("done", b.checked);
+        if (b.checked) done++;
+      });
+      var pct = Math.round(done / boxes.length * 100);
+      $("stat-done").textContent = done + "/" + boxes.length;
+      $("pct").textContent = pct + "% done";
+      $("bar").style.width = pct + "%";
+      $("bar").parentNode.setAttribute("aria-valuenow", done);
+      $("cheer").textContent = done === boxes.length ? "Every step is done. Thank you for showing up!"
+        : done ? "Nice momentum. One step at a time." : "Every step counts. Pick one to start with.";
+    }
+    boxes.forEach(function (b) {
+      b.addEventListener("change", function () { st.tasks[b.dataset.task] = b.checked; saveState(n.id, st); paint(); });
+    });
+    paint();
+  }
+
+  /* ───────── PULSE CHECK ───────── */
+  function bindPoll(n, st) {
+    var btns = [].slice.call(document.querySelectorAll("[data-choice]"));
+    if (!btns.length) return;
+    var send = $("poll-send");
+    function paint() {
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.choice === st.poll)); });
+      var sent = !!st.poll && st.pollSent === st.poll;
+      send.disabled = !st.poll;
+      send.textContent = sent ? "Opened in email ✓" : "Email my pick";
+      $("poll-msg").textContent = !st.poll ? "Choose one, then email it to the team."
+        : sent ? "Your email app should be open with your pick filled in. Just hit send. Thanks for weighing in!" + NO_MAIL_APP
+        : "Your pick: " + st.poll + ". Tap the button to email it to the team.";
+    }
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () { st.poll = b.dataset.choice; saveState(n.id, st); paint(); });
+    });
+    send.addEventListener("click", function () {
+      var choice = st.poll;
+      sendResponse(n, { type: "Pulse check", "poll-question": n.poll.question || "", "poll-choice": choice })
+        .then(function () { st.pollSent = choice; saveState(n.id, st); paint(); })
+        .catch(function () { paint(); $("poll-msg").textContent = SEND_FAIL; });
+    });
+    paint();
+  }
+
+  /* ───────── IDEAS ───────── */
+  function bindIdeas(n, st) {
+    function paint() {
+      var host = $("ideas");
+      host.replaceChildren();
+      st.ideas.forEach(function (it) {
+        var d = document.createElement("div"); d.className = "idea";
+        var b = document.createElement("strong"); b.textContent = it.name || "Anonymous";
+        var p = document.createElement("div"); p.textContent = it.text;
+        d.append(b, p); host.append(d);
+      });
+    }
+    var btn = $("idea-add");
+    btn.addEventListener("click", function () {
+      var text = $("idea-text").value.trim().slice(0, 800);
+      var name = $("idea-name").value.trim().slice(0, 80);
+      if (!text) { $("idea-text").focus(); return; }
+      sendResponse(n, { type: "Add your spark", name: name, message: text })
+        .then(function () {
+          st.ideas.unshift({ name: name, text: text });
+          st.ideas = st.ideas.slice(0, 40);
+          $("idea-text").value = "";
+          saveState(n.id, st); paint();
+          $("idea-msg").textContent = "Your email app should be open with your note filled in. Just hit send. Thank you!" + NO_MAIL_APP;
+        })
+        .catch(function () { $("idea-msg").textContent = SEND_FAIL; });
+    });
+    paint();
+  }
+
+  /* ───────── CROSSWORD UI ───────── */
+  function crosswordHtml(xw) {
+    var cells = "";
+    for (var r = 0; r < xw.rows; r++) {
+      for (var c = 0; c < xw.cols; c++) {
+        var cell = xw.cells[r + "," + c];
+        if (!cell) { cells += '<div class="xw-gap"></div>'; continue; }
+        cells += '<div class="xw-cell" data-rc="' + r + "," + c + '">' +
+          (cell.num ? '<span class="xw-num">' + cell.num + "</span>" : "") +
+          '<input maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" aria-label="Row ' + (r + 1) + ", column " + (c + 1) + '">' +
+        "</div>";
+      }
+    }
+    var list = function (dir) {
+      return xw.words.filter(function (w) { return w.dir === dir; })
+        .sort(function (a, b) { return a.num - b.num; })
+        .map(function (w) { return '<li data-word="' + w.idx + '"><b>' + w.num + "</b>" + esc(w.clue) + " <span class=\"small\">(" + w.answer.length + ")</span></li>"; })
+        .join("");
+    };
+    return '<div class="band full no-print"><section>' +
+      '<div class="eyebrow">Puzzle corner</div>' +
+      "<h2>The Mini Crossword</h2>" +
+      '<p class="small">Every answer comes from this meeting. Tap a square to start; tap it again to switch between across and down.</p>' +
+      '<div class="xw-wrap">' +
+        '<div class="xw-board" style="width:min(100%,' + (xw.cols * 46) + 'px)">' +
+          '<div class="xw-current" id="xw-current" aria-live="polite"></div>' +
+          '<div class="xw-grid" id="xw-grid" style="grid-template-columns:repeat(' + xw.cols + ',minmax(0,1fr))">' + cells + "</div>" +
+          '<div class="controls"><button class="btn" type="button" id="xw-check">Check</button>' +
+          '<button class="btn soft" type="button" id="xw-reveal">Reveal</button>' +
+          '<button class="btn soft" type="button" id="xw-clear">Clear</button></div>' +
+          '<p class="xw-msg" id="xw-msg" aria-live="polite"></p>' +
+        "</div>" +
+        '<div class="xw-clues"><div><h3>Across</h3><ol>' + list("across") + "</ol></div>" +
+          "<div><h3>Down</h3><ol>" + list("down") + "</ol></div></div>" +
+      "</div></section></div>";
+  }
+
+  function bindCrossword(n, st, xw) {
+    var grid = $("xw-grid");
+    var inputs = {};
+    [].slice.call(grid.querySelectorAll(".xw-cell")).forEach(function (el) {
+      inputs[el.dataset.rc] = el.querySelector("input");
+    });
+    var dir = "across", active = null, pressedActive = false;
+
+    var wordCells = function (w) {
+      var out = [];
+      for (var i = 0; i < w.answer.length; i++) {
+        out.push((w.r + (w.dir === "down" ? i : 0)) + "," + (w.c + (w.dir === "across" ? i : 0)));
+      }
+      return out;
+    };
+    var currentWord = function () {
+      if (!active) return null;
+      var ws = xw.cells[active].words;
+      return xw.words[ws[dir] != null ? ws[dir] : ws[dir === "across" ? "down" : "across"]];
+    };
+
+    function paint() {
+      var w = currentWord();
+      var inWord = w ? wordCells(w) : [];
+      Object.keys(inputs).forEach(function (k) {
+        inputs[k].parentNode.classList.toggle("in-word", inWord.indexOf(k) >= 0);
+      });
+      [].slice.call(document.querySelectorAll(".xw-clues li")).forEach(function (li) {
+        var word = xw.words[+li.dataset.word];
+        li.classList.toggle("active", !!w && word.idx === w.idx);
+        li.classList.toggle("done", wordCells(word).every(function (k) { return st.xw[k] === xw.cells[k].letter; }));
+      });
+      $("xw-current").innerHTML = w ? "<b>" + w.num + " " + (w.dir === "across" ? "Across" : "Down") + "</b>" + esc(w.clue)
+        : "Pick a square or a clue to begin.";
+    }
+
+    function checkSolved() {
+      var all = Object.keys(xw.cells).every(function (k) { return st.xw[k] === xw.cells[k].letter; });
+      Object.keys(inputs).forEach(function (k) { inputs[k].parentNode.classList.toggle("solved", all); });
+      if (all) $("xw-msg").textContent = "You solved it! Thanks for reading all the way through.";
+      $("xw-msg").classList.toggle("win", all);
+      return all;
+    }
+
+    function focusCell(k) { if (inputs[k]) inputs[k].focus(); }
+    function step(k, d, delta) {
+      var rc = k.split(",").map(Number);
+      var nk = (rc[0] + (d === "down" ? delta : 0)) + "," + (rc[1] + (d === "across" ? delta : 0));
+      return inputs[nk] ? nk : null;
+    }
+
+    Object.keys(inputs).forEach(function (k) {
+      var inp = inputs[k];
+      inp.value = st.xw[k] || "";
+      inp.addEventListener("pointerdown", function () { pressedActive = document.activeElement === inp; });
+      inp.addEventListener("click", function () {
+        var ws = xw.cells[k].words;
+        if (pressedActive && ws.across != null && ws.down != null) { dir = dir === "across" ? "down" : "across"; paint(); }
+      });
+      inp.addEventListener("focus", function () {
+        active = k;
+        if (xw.cells[k].words[dir] == null) dir = dir === "across" ? "down" : "across";
+        inp.select();
+        paint();
+      });
+      inp.addEventListener("input", function () {
+        var letter = inp.value.toUpperCase().replace(/[^A-Z]/g, "").slice(-1);
+        inp.value = letter;
+        st.xw[k] = letter;
+        inp.parentNode.classList.remove("wrong");
+        saveState(n.id, st);
+        $("xw-msg").textContent = "";
+        if (!checkSolved() && letter) {
+          var nk = step(k, dir, 1);
+          if (nk) focusCell(nk);
+        }
+        paint();
+      });
+      inp.addEventListener("keydown", function (e) {
+        var moves = { ArrowRight: ["across", 1], ArrowLeft: ["across", -1], ArrowDown: ["down", 1], ArrowUp: ["down", -1] };
+        if (moves[e.key]) {
+          e.preventDefault();
+          var m = moves[e.key];
+          if (dir !== m[0] && xw.cells[k].words[m[0]] != null) { dir = m[0]; paint(); return; }
+          var nk = step(k, m[0], m[1]);
+          if (nk) { dir = m[0]; focusCell(nk); }
+        } else if (e.key === "Backspace" && !inp.value) {
+          e.preventDefault();
+          var pk = step(k, dir, -1);
+          if (pk) {
+            inputs[pk].value = ""; st.xw[pk] = ""; saveState(n.id, st);
+            focusCell(pk);
+          }
+        } else if (e.key === " ") {
+          e.preventDefault();
+          if (xw.cells[k].words.across != null && xw.cells[k].words.down != null) { dir = dir === "across" ? "down" : "across"; paint(); }
+        }
+      });
+    });
+
+    [].slice.call(document.querySelectorAll(".xw-clues li")).forEach(function (li) {
+      li.addEventListener("click", function () {
+        var w = xw.words[+li.dataset.word];
+        dir = w.dir;
+        var cellsOf = wordCells(w);
+        focusCell(cellsOf.filter(function (k) { return !st.xw[k]; })[0] || cellsOf[0]);
+      });
+    });
+
+    $("xw-check").addEventListener("click", function () {
+      var wrong = 0, blank = 0;
+      Object.keys(inputs).forEach(function (k) {
+        var bad = !!st.xw[k] && st.xw[k] !== xw.cells[k].letter;
+        inputs[k].parentNode.classList.toggle("wrong", bad);
+        if (bad) wrong++;
+        if (!st.xw[k]) blank++;
+      });
+      if (!checkSolved()) {
+        $("xw-msg").textContent = wrong ? plural(wrong, "square") + " to take another look at."
+          : "Looking good so far. " + plural(blank, "square") + " to go.";
+      }
+    });
+    $("xw-reveal").addEventListener("click", function () {
+      if (!confirm("Reveal the whole puzzle?")) return;
+      Object.keys(inputs).forEach(function (k) {
+        st.xw[k] = xw.cells[k].letter; inputs[k].value = st.xw[k];
+        inputs[k].parentNode.classList.remove("wrong");
+      });
+      saveState(n.id, st); checkSolved(); paint();
+    });
+    $("xw-clear").addEventListener("click", function () {
+      st.xw = {};
+      Object.keys(inputs).forEach(function (k) { inputs[k].value = ""; inputs[k].parentNode.classList.remove("wrong"); });
+      saveState(n.id, st); $("xw-msg").textContent = ""; checkSolved(); paint();
+    });
+
+    checkSolved();
+    paint();
+  }
+
+  /* ───────── ARCHIVE ───────── */
+  function renderArchive(list, currentId) {
+    $("archive-count").textContent = plural(list.length, "edition");
+    $("archive").innerHTML = list.map(function (n) {
+      return '<a class="card" href="#' + esc(n.id) + '"' + (n.id === currentId ? ' aria-current="true"' : "") + ">" +
+        '<span class="card-date">' + esc(shortDate(n.date)) + " · " + esc(n.kicker || "Notes") + "</span>" +
+        "<h3>" + esc(n.title) + "</h3>" +
+        (n.deck ? "<p>" + esc(n.deck) + "</p>" : "") +
+      "</a>";
+    }).join("");
+  }
+
+  function render() {
+    var list = filtered();
+    var id = decodeURIComponent(location.hash.slice(1));
+    var current = list.filter(function (n) { return n.id === id; })[0] || list[0];
+    renderFront(current);
+    renderArchive(list, current && current.id);
+  }
+
+  window.addEventListener("hashchange", function () { render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  ["search", "kind", "month"].forEach(function (id) {
+    $(id).addEventListener("input", function () {
+      if (location.hash) history.replaceState(null, "", location.pathname);
+      render();
+    });
+  });
+
+  if (!notes.length) {
+    $("front").innerHTML = '<p class="empty">The first edition is on its way.</p>';
+    return;
+  }
+  render();
+})();
+</script>
+</body>
+</html>
