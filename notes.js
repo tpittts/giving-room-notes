@@ -40,8 +40,8 @@ window.TGR_NOTES = [
     id: "2026-11-05-community-day",
     date: "2026-11-05",
     kicker: "Community Day",
-    title: "Our First Community Day: 21 Families and 47 Children",
-    deck: "We would have been happy with five. Then the families kept coming, and we stepped aside for a quick huddle on what's working and what we'll change for next time.",
+    title: "Our First Community Day: 21 Families",
+    deck: "We would have been happy with five, but then the families kept coming! Here's what worked and what didn't.",
     attendees: ["Jasie", "Rae", "Miriam", "Brittany", "Myeisha"],
     summary:
       "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them!\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nIn the middle of it all, a few of us took a few minutes to talk through what we were seeing on the floor, while it was still fresh. The short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
