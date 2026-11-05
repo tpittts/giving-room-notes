@@ -40,11 +40,11 @@ window.TGR_NOTES = [
     id: "2026-11-05-community-day",
     date: "2026-11-05",
     kicker: "Community Day",
-    title: "Our First Community Day: What We're Changing for Next Time",
-    deck: "Doors were open and families were shopping when we stepped aside for a quick huddle on what's working and what we'll do differently.",
-    attendees: ["Jasie", "Rae", "Miriam"],
+    title: "Our First Community Day: 21 Families and 47 Children",
+    deck: "We would have been happy with five. Then the families kept coming, and we stepped aside for a quick huddle on what's working and what we'll change for next time.",
+    attendees: ["Jasie", "Rae", "Miriam", "Brittany", "Myeisha"],
     summary:
-      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them! In the middle of it, Jasie, Rae and Miriam took a few minutes to talk through what we were seeing on the floor, while it was still fresh.\n\nThe short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
+      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them!\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nIn the middle of it all, a few of us took a few minutes to talk through what we were seeing on the floor, while it was still fresh. The short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
     sections: [
       {
         heading: "Diapers, wipes and formula stay at checkout",
@@ -68,7 +68,7 @@ window.TGR_NOTES = [
       }
     ],
     wins: [
-      "21 families and 47 children came to our first Community Day!",
+      "21 families and 47 children came to our first Community Day. We'd have been happy with five!",
       "Road to 100 Nos brought in its first $250 donation in week one, thanks to Myeisha.",
       "Team shirts were ready in time. Thank you, Miriam, and the friends who helped make them.",
       "The handwritten signs made the space feel warm and welcoming."
