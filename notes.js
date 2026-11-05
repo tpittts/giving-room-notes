@@ -93,8 +93,8 @@ window.TGR_NOTES = [
     northStar: "Make Community Day easy to find, fair for every family and calm to shop.",
     next: { date: "Our next Community Day", agenda: "Community Days run every other Thursday, 9 to 1. Try out the new sign-in, half-full tables and front sign." },
     quote: {
-      text: "It feels homey. It feels like we're a part of the community.",
-      by: "Said about our handwritten signs"
+      text: "I'm happy if five people come because those five people are gonna tell somebody else.",
+      by: "Said at our November 1 planning meeting"
     },
     poll: {
       question: "Which change will help families most at the next Community Day?",
