@@ -40,11 +40,11 @@ window.TGR_NOTES = [
     id: "2026-11-05-community-day",
     date: "2026-11-05",
     kicker: "Community Day",
-    title: "Our First Community Day: 21 Families",
+    title: "21 Families Served of Our Year-End Goal of 50!",
     deck: "We would have been happy with five, but then the families kept coming! Here's what worked and what didn't.",
     attendees: ["Jasie", "Rae", "Miriam", "Brittany", "Myeisha"],
     summary:
-      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them!\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nIn the middle of it all, a few of us took a few minutes to talk through what we were seeing on the floor, while it was still fresh. The short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.",
+      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them! That's 21 unique families toward our year-end goal of 50, in a single day. We also took in three donation drop-offs, and several pop-up volunteers jumped in to help without being asked.\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nIn the middle of it all, a few of us took a few minutes to talk through what we were seeing on the floor, while it was still fresh. The short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.\n\nMark your calendar: our next Community Day is Thursday, November 19, from 9 to 1.",
     sections: [
       {
         heading: "Diapers, wipes and formula stay at checkout",
@@ -63,13 +63,19 @@ window.TGR_NOTES = [
         body: "Lots of people walked past and asked, \"Is this the right place?\" Our parking lot sign wasn't drawing people toward our section, so we need one more at the very front. If it's around ten dollars, we'll buy it.\n\nMiriam has been designing signs and cutting them in vinyl, and she'll make category signs for the clothing tables too. The handwritten signs are staying for now, though. They feel homey, like we're part of the community."
       },
       {
+        heading: "Change of plans: no toy boxes this December",
+        body: "We're not doing toy drive boxes this December after all. Instead we're putting our energy into fundraising and getting the coats we've collected to families. If you'd already started asking businesses about toy boxes, you can let them know the plan changed. Coats will go out at Community Days."
+      },
+      {
         heading: "Other updates: Road to 100 Nos is off and running",
-        body: "On Tuesday we kicked off Road to 100 Nos, our fundraising campaign asking local businesses to become Holiday Partners through December 31. We've already landed our first yes: a $250 donation, thanks to Myeisha!\n\nTo keep the momentum going, everyone on the team will ask at least two businesses a week to donate."
+        body: "On Tuesday we kicked off Road to 100 Nos, our fundraising campaign asking local businesses to become Holiday Partners through December 31. Every core team member is asking two businesses a week to give. Myeisha is the first of us to bring in funding: $250, just days after we launched. Thank you, Myeisha!\n\nTwo asks a week each, every week, gets us there."
       }
     ],
     wins: [
       "21 families and 47 children came to our first Community Day. We'd have been happy with five!",
-      "Road to 100 Nos brought in its first $250 donation in week one, thanks to Myeisha.",
+      "Shout-out to Myeisha, the first on our team to land funding for Road to 100 Nos: $250, just days after we launched!",
+      "Three donation drop-offs came in during the day.",
+      "Several pop-up volunteers jumped in and helped. Thank you!",
       "Team shirts were ready in time. Thank you, Miriam, and the friends who helped make them.",
       "The handwritten signs made the space feel warm and welcoming."
     ],
@@ -81,7 +87,8 @@ window.TGR_NOTES = [
       "A separate donation sheet so we can offer receipts",
       "Explain one bag per child after families sign in",
       "Add a sign at the front of our section",
-      "Everyone asks at least two businesses a week to donate during Road to 100 Nos"
+      "Everyone asks at least two businesses a week to donate during Road to 100 Nos",
+      "No toy drive boxes this December; we're focusing on fundraising and giving out the coats we've collected"
     ],
     actions: [
       { task: "Make a sign for the front of our section, plus category signs for the clothing tables", owner: "Miriam", due: "Next Community Day" },
@@ -91,7 +98,7 @@ window.TGR_NOTES = [
       { task: "Ask at least two businesses to donate for Road to 100 Nos", owner: "Everyone", due: "Every week through Dec 31" }
     ],
     northStar: "Make Community Day easy to find, fair for every family and calm to shop.",
-    next: { date: "Our next Community Day", agenda: "Community Days run every other Thursday, 9 to 1. Try out the new sign-in, half-full tables and front sign." },
+    next: { date: "Next Community Day: Thursday, November 19, 9 to 1", agenda: "We'll try out the new sign-in, half-full tables and the new sign at the front of our section. Coats from the drive go out to families here too." },
     quote: {
       text: "I'm happy if five people come because those five people are gonna tell somebody else.",
       by: "Said at our November 1 planning meeting"
