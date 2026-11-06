@@ -44,7 +44,7 @@ window.TGR_NOTES = [
     deck: "We would have been happy with five, but then the families kept coming! Here's what worked and what didn't.",
     attendees: ["Jasie", "Rae", "Miriam", "Brittany", "Myeisha"],
     summary:
-      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them! That's 21 unique families toward our year-end goal of 50, in a single day. We also took in three donation drop-offs, and several pop-up volunteers jumped in to help without being asked.\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nIn the middle of it all, a few of us took a few minutes to talk through what we were seeing on the floor, while it was still fresh. The short version: the tables are working, but we put too much out at once, people had a hard time finding our section, and sign-in and checkout need a little more structure. None of it is big. All of it will make the next one smoother.\n\nMark your calendar: our next Community Day is Thursday, November 19, from 9 to 1.",
+      "Our first Community Day is in the books, and 21 families came through our doors with 47 children between them! That's 21 unique families toward our year-end goal of 50, in a single day. We also took in three donation drop-offs, and several pop-up volunteers jumped in to help without being asked.\n\nAt our planning meeting, we said we'd be happy if just five people came, because those five would tell somebody else. We got more than four times that. Thank you to every family who showed up, and to everyone who spread the word.\n\nMark your calendar: our next Community Day is Thursday, November 19, from 9 to 1.",
     sections: [
       {
         heading: "Diapers, wipes and formula stay at checkout",
@@ -60,7 +60,7 @@ window.TGR_NOTES = [
       },
       {
         heading: "Signs that point the way",
-        body: "Lots of people walked past and asked, \"Is this the right place?\" Our parking lot sign wasn't drawing people toward our section, so we need one more at the very front. If it's around ten dollars, we'll buy it.\n\nMiriam has been designing signs and cutting them in vinyl, and she'll make category signs for the clothing tables too. The handwritten signs are staying for now, though. They feel homey, like we're part of the community."
+        body: "Lots of people walked past and asked, \"Is this the right place?\" Our parking lot sign wasn't drawing people toward our section. So in addition to the parking lot sign, we're adding a larger sign at the start of the pavilion, so families know right away they've found us."
       },
       {
         heading: "Change of plans: no toy boxes this December",
@@ -76,8 +76,6 @@ window.TGR_NOTES = [
       "Shout-out to Myeisha, the first on our team to land funding for Road to 100 Nos: $250, just days after we launched!",
       "Three donation drop-offs came in during the day.",
       "Several pop-up volunteers jumped in and helped. Thank you!",
-      "Team shirts were ready in time. Thank you, Miriam, and the friends who helped make them.",
-      "The handwritten signs made the space feel warm and welcoming."
     ],
     decisions: [
       "Diapers, wipes and formula are handed out at the checkout table",
@@ -86,19 +84,19 @@ window.TGR_NOTES = [
       "New sign-in sheet with emails and social media consent",
       "A separate donation sheet so we can offer receipts",
       "Explain one bag per child after families sign in",
-      "Add a sign at the front of our section",
+      "Add a larger sign at the start of the pavilion, in addition to the parking lot sign",
       "Everyone asks at least two businesses a week to donate during Road to 100 Nos",
       "No toy drive boxes this December; we're focusing on fundraising and giving out the coats we've collected"
     ],
     actions: [
-      { task: "Make a sign for the front of our section, plus category signs for the clothing tables", owner: "Miriam", due: "Next Community Day" },
+      { task: "Make a larger sign for the start of the pavilion, plus category signs for the clothing tables", owner: "Miriam", due: "Next Community Day" },
       { task: "Set up a new sign-in sheet with emails and social media consent", owner: "Team", due: "Next Community Day" },
       { task: "Start a separate donation sheet with signatures and emails for receipts", owner: "Team", due: "Next Community Day" },
       { task: "Find one more volunteer for the checkout table", owner: "Team" },
       { task: "Ask at least two businesses to donate for Road to 100 Nos", owner: "Everyone", due: "Every week through Dec 31" }
     ],
     northStar: "Make Community Day easy to find, fair for every family and calm to shop.",
-    next: { date: "Next Community Day: Thursday, November 19, 9 to 1", agenda: "We'll try out the new sign-in, half-full tables and the new sign at the front of our section. Coats from the drive go out to families here too." },
+    next: { date: "Next Community Day: Thursday, November 19, 9 to 1", agenda: "We'll try out the new sign-in, half-full tables and the larger sign at the start of the pavilion. Coats from the drive go out to families here too." },
     quote: {
       text: "I'm happy if five people come because those five people are gonna tell somebody else.",
       by: "Said at our November 1 planning meeting"
@@ -119,9 +117,9 @@ window.TGR_NOTES = [
       { answer: "HALFWAY", clue: "How full to fill each table at the start" },
       { answer: "CONSENT", clue: "The new sign-in sheet asks for social media ___" },
       { answer: "SIGNS", clue: "Miriam is making more of these" },
-      { answer: "VINYL", clue: "What Miriam cuts her designs from" },
+      { answer: "PAVILION", clue: "Our larger new sign goes at the start of the ___" },
       { answer: "RECEIPT", clue: "The donation sheet lets us send one" },
-      { answer: "HOMEY", clue: "How our handwritten signs feel" },
+      { answer: "FIFTY", clue: "Our year-end goal: ___ families served" },
       { answer: "RESTOCK", clue: "What we'll keep doing as tables run low" },
       { answer: "FAMILIES", clue: "Twenty-one of these came to our first Community Day" }
     ]
